@@ -1,7 +1,7 @@
-import { navPath } from '@/data/navLinks';
+import { navLinks } from '@/data/navLinks';
 
 const NavLinks = ({ onClick }: { onClick?: () => void }) => {
-  return navPath.map((link) => (
+  return navLinks.map((link) => (
     <li key={link.id}>
       <a
         href={link.path}
