@@ -5,13 +5,12 @@ import DarkOverlay from '../common/DarkOverlay';
 import GreenOverlay from '../common/GreenOverlay';
 import { Star } from 'lucide-react';
 import ThreeGreenBoxes from '../common/ThreeGreenBoxes';
-import Link from 'next/link';
 
 const HeroSection = () => {
   return (
     <section
-      id='hero'
-      className='relative flex flex-col lg:items-end lg:pl-30 lg:-mt-20 w-full border-b gap-3 lg:gap-0'
+      id='home'
+      className='relative flex flex-col lg:items-end lg:pl-30 lg:-mt-20 w-full border-b gap-3 lg:gap-0 scroll-mt-20 lg:scroll-mt-0'
     >
       <div className='relative lg:absolute lg:left-30 lg:top-55.25 -mt-20 pt-20'>
         <div className='relative  flex flex-col gap-10 lg:gap-15 py-10 lg:px-0 lg:py-0 lg:max-w-201.75 z-1 px-4 lg:pr-0'>
@@ -32,9 +31,9 @@ const HeroSection = () => {
               user-friendly web applications
             </p>
           </div>
-          <Link href='#contact' className='lg:max-w-75 lg:h-14'>
+          <a href='#contact' className='lg:max-w-75 lg:h-14'>
             <Button>HIRE ME</Button>
-          </Link>
+          </a>
           <div className='block lg:hidden absolute inset-y-0 inset-x-2 left-3/4 border-l -z-1' />
         </div>
         <div className='block lg:hidden absolute inset-y-0 inset-x-2 left-1/2 border-l -z-1' />
@@ -51,7 +50,7 @@ const HeroSection = () => {
             className='object-center object-contain lg:object-cover grayscale brightness-50 '
           />
         </div>
-        <DarkOverlay />
+        <DarkOverlay rightOverlay={false} />
         <GreenOverlay />
         <div className='absolute left-1/2 -translate-x-1/2 bg-black border rounded-xl lg:rounded-3xl p-2xl flex flex-col gap-md bottom-10 lg:bottom-21 w-full max-w-87.25'>
           <p className='text-display-xs lg:text-display-xl font-bold'>5.0</p>
